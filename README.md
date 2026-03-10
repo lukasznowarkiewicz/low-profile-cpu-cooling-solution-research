@@ -749,22 +749,6 @@ A004 | 5:27 | 921 | 89 | 2.75 | 13 |
   
   
   
-## Observations and conclusions:  
-  
-- Intel TDP rating is confusing - 6W TDP processor is actually consuming 15 W of power. Maximum turbo power is not listed anywhere for Intel N100 processor. Designing heat sink for this amount of power to dissipate will result in CPU throttling just after a few second (which was easy to spot for first 4 heat sinks)  
-- For this one of the smallest and most low power x86 intel CPU to keep performing under sustained load active cooling is required - none of the heatisinks tested (even the original one) were sufficient to keep the CPU operating at max frequency even at room temperature  
-- Intel CPU has many protections agains poorly designed or insufficient heat sinks - it limits operating frequency to maintain safe temperature  
-- Probably should work on exact starting conditions between tests as some of the experiments seems to be counterintuitive (ex. Test with 2 exactly same heatpipes came out worse than with single)  
-- The best performing thermal elements are two 24 cm heat pipes (DUT A007) - I’m critical of this result - it could be because of largest thermal capacitance of the elements   
-- Two raw copper bars were behaving great and those were second best result - it is a good information as raw copper bars were the thinnest and could result in overall thinest cooling solution  
-- Third best result is for 3 parallel coper heatpipes - here CPU frequency seemed locked at 2.92 GHz, where temperatures were below 80 deg - that could be some variable in CPU firmware making decisions at which frequencies work  
-- All aluminium vapor chambers are useless for this amount of heat needed to transfer - even single 24 cm cooper heat pipe behaves better, being much lighter and smaller  
-- The best results achieved for 3 copper heatpipes and active cooled heatsink  
-- Two most pleasant for the ears fan profiles were 4 and 5 - the fan was not rapidly increasing or decreasing RPM - those are having the lowest average noise  
-- Fan profiles 4 and 5 were also the best ones for the performance - profile 5 achieved the best result both in cinebench - on sustained load and on web passmark test - on pulse loads. 5 seconds averaging and 2 deg hysteresis seems to be a good options   
-- Why in ACPI there is not easy option to increase fan profiles based on actual power usage, just the temperature which is reactive, not proactive - controlling fan based on the power supplied to it would be better  
-  
-  
 ## Observations and conclusions  
   
 - Intel TDP ratings can be misleading. A processor labeled as 6 W TDP was observed consuming up to around 15 W under load. For the Intel N100, the maximum turbo power is not clearly documented. In practice, designing a heatsink only for the nominal TDP would result in CPU throttling after just a few seconds, which was easy to observe with the first four heatsinks tested.  
